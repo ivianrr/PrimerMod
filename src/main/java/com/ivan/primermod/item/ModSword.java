@@ -1,11 +1,15 @@
 package com.ivan.primermod.item;
 
 import com.google.common.collect.Sets;
+import com.ivan.primermod.utility.NBTHelper;
 
 import java.util.Set;
 
 import net.minecraft.block.Block;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 
 public class ModSword extends ModTool
 {
@@ -14,7 +18,18 @@ public class ModSword extends ModTool
 	public ModSword(){
 		super(4,ToolMaterial.IRON,minables);
 		this.setMaxDamage(500);
-		
+		this.setFull3D();
 		this.setUnlocalizedName("heavenSword");
+	}
+	@Override
+	public void onCreated(ItemStack itemStack, World world, EntityPlayer player){
+		setOwner(itemStack, world, player);
+	}
+	
+	public void setOwner(ItemStack itemStack, World world, EntityPlayer player){
+		if(NBTHelper.hasTag(itemStack, "ownersname"))
+		{
+		NBTHelper.setString(itemStack, "ownersname", player.getDisplayName());
+		}
 	}
 }
