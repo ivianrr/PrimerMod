@@ -3,12 +3,20 @@ package com.ivan.primermod.item;
 import com.google.common.collect.Sets;
 import com.ivan.primermod.utility.NBTHelper;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
+
+
+import java.util.List;
 import java.util.Set;
 
 import net.minecraft.block.Block;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
 public class ModSword extends ModTool
@@ -27,9 +35,26 @@ public class ModSword extends ModTool
 	}
 	
 	public void setOwner(ItemStack itemStack, World world, EntityPlayer player){
-		if(NBTHelper.hasTag(itemStack, "ownersname"))
+		if(!NBTHelper.hasTag(itemStack, "ownersname"))
 		{
 		NBTHelper.setString(itemStack, "ownersname", player.getDisplayName());
 		}
 	}
+
+	public void onUpdate(ItemStack itemStack, World par2World, Entity par3Entity, int par4, boolean par5) {
+		if(par3Entity instanceof EntityPlayer){
+			setOwner(itemStack, ((EntityPlayer)par3Entity).getEntityWorld(), (EntityPlayer)par3Entity);
+		}
+	}
+
+//	@SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean p_77624_4_)
+{
+		
+		String name = NBTHelper.getString(itemStack, "ownersname");
+		list.add(EnumChatFormatting.GREEN + "hola");
+		if (name!=null)
+				list.add("owner: " + name);
+	}
+
 }

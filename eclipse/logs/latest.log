@@ -1,11 +1,39 @@
-[00:00:06] [Server thread/INFO]: Saving and pausing game...
-[00:00:06] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[00:00:06] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[00:00:06] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[00:00:07] [Server thread/INFO]: Stopping server
-[00:00:07] [Server thread/INFO]: Saving players
-[00:00:07] [Server thread/INFO]: Saving worlds
-[00:00:07] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[00:00:07] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[00:00:07] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[00:00:08] [Client thread/INFO]: Stopping!
+[00:47:46] [main/INFO]: Setting user: ivianrr
+[00:47:48] [Client thread/INFO]: LWJGL Version: 2.9.1
+[00:47:55] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Mod de Ivan
+[00:47:56] [Sound Library Loader/INFO]: Sound engine started
+[00:47:58] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[00:47:59] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[00:48:00] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Mod de Ivan
+[00:48:00] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[00:48:02] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[00:48:03] [Sound Library Loader/INFO]: Sound engine started
+[00:48:07] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[00:48:07] [Server thread/INFO]: Generating keypair
+[00:48:07] [Server thread/INFO]: Preparing start region for level 0
+[00:48:08] [Server thread/INFO]: Changing view distance to 12, from 10
+[00:48:09] [Server thread/INFO]: ivianrr[local:E:d81b252d] logged in with entity id 4 at (-339.530646596649, 56.0, -672.0496537843767)
+[00:48:09] [Server thread/INFO]: ivianrr se ha unido a la partida
+[00:48:31] [Server thread/INFO]: Saving and pausing game...
+[00:48:31] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[00:48:31] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[00:48:31] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[00:48:36] [Client thread/INFO]: Started on 548[00:48:40] [Client thread/INFO]: LWJGL Version: 2.9.1
+[00:48:55] [Client thread/INFO][00:49:35] [User Authenticator #1/WARN]: Failed to verify username but will let them in anyway!
+[00:49:35] [Server thread/INFO]: Disconnecting com.mojang.authlib.GameProfile@700054f0[id=ae677bdd-3098-35d0-987e-3141ea5bfde5,name=ivianrr,properties={},legacy=false] (/192.168.1.35:54861): That name is already taken.
+[00:49:36] [Server thread/INFO]: com.mojang.authlib.GameProfile@700054f0[id=ae677bdd-3098-35d0-987e-3141ea5bfde5,name=ivianrr,properties={},legacy=false] (/192.168.1.35:54861) lost connection: That name is already taken.
+] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[00:49:22] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[00:49:23] [Sound Library Loader/INFO]: Sound engine started
+[00:49:31] [Client thread/INFO]: Connecting to 192.168.1.35, 54838
+[00:50:08] [Client thread/INFO]: Stopping!
+[00:50:44] [main/INFO]: Setting user: NKDHWD
+[00:50:47] [Client thread/INFO]: LWJGL Version: 2.9.1
+[00:51:00] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Mod de Ivan
+[00:51:02] [Sound Library Loader/INFO]: Sound engine started
+[00:51:18] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[00:51:20] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[00:51:21] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Mod de Ivan
+[00:51:21] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[00:51:23] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[00:51:24] [Sound Library Loader/INFO]: Sound engine started
