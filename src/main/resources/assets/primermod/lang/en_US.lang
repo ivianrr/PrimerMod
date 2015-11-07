@@ -11,7 +11,7 @@ itemGroup.primermod=Primer Mod
 
 #Items
 item.primermod:mapleLeaf.name=Hoja
-item.primermod:heavenSword.name=Espada Celestial
+item.primermod:heavenSword.name=Espada Infernal
 
 #Blocks
 tile.primermod:flag.name=Bloque de hojas

@@ -59,6 +59,7 @@ public class ModSword extends ModTool
 		
 		int cargas=NBTHelper.getInt(itemStack, "cargas");
 		list.add(EnumChatFormatting.RED + "Blood: " + cargas);
+		if (cargas==0)list.add(EnumChatFormatting.DARK_PURPLE+"Alimenta a la espada");
 	}
     @Override
 	public ItemStack onItemRightClick(ItemStack itemStack, World world,
