@@ -65,7 +65,6 @@ public class ModSword extends ModTool
 			EntityPlayer player)
 	{
 		int cargas=NBTHelper.getInt(itemStack, "cargas");
-    	//TO-DO: Gastar cargas
     	if (cargas!=0 && player.motionY < 2)
 		{
     		NBTHelper.setInteger(itemStack, "cargas",--cargas);
@@ -85,7 +84,7 @@ public class ModSword extends ModTool
 		}
 	}
 	public boolean onLeftClickEntity(ItemStack itemStack, EntityPlayer player, Entity entity){
-		//TO-DO : ROBAR VIDA
+		//TO-DO : blacklist no-mob entities
 		int cargas=NBTHelper.getInt(itemStack, "cargas");
 		cargas++;
 		NBTHelper.setInteger(itemStack, "cargas", cargas);
