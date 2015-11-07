@@ -2,9 +2,11 @@ package com.ivan.primermod.item;
 
 import com.google.common.collect.Sets;
 import com.ivan.primermod.utility.NBTHelper;
+import com.ivan.primermod.utility.PlayerDirection;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+
 
 
 
@@ -35,7 +37,7 @@ public class ModSword extends ModTool
 	}
 	
 	public void setOwner(ItemStack itemStack, World world, EntityPlayer player){
-		if(!NBTHelper.hasTag(itemStack, "ownersname"))
+		if(NBTHelper.getString(itemStack, "ownersname")== "" || !NBTHelper.hasTag(itemStack, "ownersname"))
 		{
 		NBTHelper.setString(itemStack, "ownersname", player.getDisplayName());
 		}
@@ -52,9 +54,42 @@ public class ModSword extends ModTool
 {
 		
 		String name = NBTHelper.getString(itemStack, "ownersname");
-		list.add(EnumChatFormatting.GREEN + "hola");
 		if (name!=null)
 				list.add("owner: " + name);
+		
+		int cargas=NBTHelper.getInt(itemStack, "cargas");
+		list.add(EnumChatFormatting.RED + "Blood: " + cargas);
+	}
+    @Override
+	public ItemStack onItemRightClick(ItemStack itemStack, World world,
+			EntityPlayer player)
+	{
+		int cargas=NBTHelper.getInt(itemStack, "cargas");
+    	//TO-DO: Gastar cargas
+    	if (cargas!=0 && player.motionY < 2)
+		{
+    		NBTHelper.setInteger(itemStack, "cargas",--cargas);
+			impulsar(player, 1.5);
+			if (player.motionY >= -1) player.fallDistance = 0;
+		}
+		return itemStack;
+	}
+
+	public static void impulsar(EntityPlayer player, double horizontalMultipier)
+	{
+		PlayerDirection p = new PlayerDirection(player);
+		if (p.getHorizontalSpeedModule() < 2)
+		{
+			player.addVelocity(p.getX() * horizontalMultipier, 0.75, p.getZ()
+					* horizontalMultipier);
+		}
+	}
+	public boolean onLeftClickEntity(ItemStack itemStack, EntityPlayer player, Entity entity){
+		//TO-DO : ROBAR VIDA
+		int cargas=NBTHelper.getInt(itemStack, "cargas");
+		cargas++;
+		NBTHelper.setInteger(itemStack, "cargas", cargas);
+		return false;
 	}
 
 }
