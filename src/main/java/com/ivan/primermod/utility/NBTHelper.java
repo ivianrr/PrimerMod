@@ -24,7 +24,7 @@ public class NBTHelper
      * @param itemStack
      *         The ItemStack for which its NBT Tag Compound is being checked for initialization
      */
-    private static void initNBTTagCompound(ItemStack itemStack)
+    public static void initNBTTagCompound(ItemStack itemStack)
     {
         if (itemStack.stackTagCompound == null)
         {

@@ -86,9 +86,11 @@ public class ModSword extends ModTool
 	}
 	public boolean onLeftClickEntity(ItemStack itemStack, EntityPlayer player, Entity entity){
 		//TO-DO : blacklist no-mob entities
+		
 		int cargas=NBTHelper.getInt(itemStack, "cargas");
 		cargas++;
 		NBTHelper.setInteger(itemStack, "cargas", cargas);
+		
 		return false;
 	}
 

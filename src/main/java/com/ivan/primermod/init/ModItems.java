@@ -9,12 +9,12 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class ModItems {
 	
 	public static final ItemPM mapleLeaf = new ItemMapleLeaf();
-	public static final ModSword mytool = new ModSword();
+	public static final ModSword mySword = new ModSword();
 	
 	public static void init(){
 	
 		GameRegistry.registerItem(mapleLeaf, "mapleLeaf");
-		GameRegistry.registerItem(mytool, "heavenSword");
+		GameRegistry.registerItem(mySword, "heavenSword");
 	
 	}
 }
