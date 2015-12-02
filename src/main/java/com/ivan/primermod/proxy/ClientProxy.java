@@ -1,6 +1,8 @@
 package com.ivan.primermod.proxy;
 
+import com.ivan.primermod.block.tile.TileRubik;
 import com.ivan.primermod.client.handler.KeyInputEventHandler;
+import com.ivan.primermod.client.render.RenderTileRubik;
 import com.ivan.primermod.client.settings.Keybindings;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
@@ -21,6 +23,7 @@ public class ClientProxy extends CommonProxy{
 	public void init(FMLInitializationEvent e) {
 		super.init(e);
 		FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
+		initRenderers();
 	}
 
 	@Override
@@ -34,5 +37,7 @@ public class ClientProxy extends CommonProxy{
 		ClientRegistry.registerKeyBinding(Keybindings.release);
 		
 	}
-
+	private void initRenderers(){
+		 ClientRegistry.bindTileEntitySpecialRenderer(TileRubik.class, new RenderTileRubik());
+	}
 }
