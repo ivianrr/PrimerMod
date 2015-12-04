@@ -13,7 +13,7 @@ public class TileRubik extends TileMod
         //if (!worldObj.isRemote) {
         	timer++;
         	//if (timer>200){
-        		worldObj.setWorldTime(12000-timer);
+        		worldObj.setWorldTime(timer);
         	//	timer=0;
         	//}
         //}
@@ -29,5 +29,7 @@ public class TileRubik extends TileMod
 
 public int getTimer(){
 	return timer;
+} public void setTimer(int timer){
+	this.timer=timer;
 } 
 }
