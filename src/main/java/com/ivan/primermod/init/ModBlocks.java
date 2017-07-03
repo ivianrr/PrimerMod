@@ -35,7 +35,7 @@ public class ModBlocks
 		GameRegistry.registerBlock(Fosil, "fosil");
 		GameRegistry.registerBlock(Rubik, "rubik");
 		
-		GameRegistry.registerTileEntity(TileRubik.class, "tileRubik");
+		GameRegistry.registerTileEntity(TileRubik.class, "tileRubikº");
 	}
 
 }

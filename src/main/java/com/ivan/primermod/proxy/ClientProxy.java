@@ -38,6 +38,6 @@ public class ClientProxy extends CommonProxy{
 		
 	}
 	private void initRenderers(){
-		 ClientRegistry.bindTileEntitySpecialRenderer(TileRubik.class, new RenderTileRubik());
+	//	 ClientRegistry.bindTileEntitySpecialRenderer(TileRubik.class, new RenderTileRubik());
 	}
 }
